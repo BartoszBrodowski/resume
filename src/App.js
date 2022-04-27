@@ -1,13 +1,13 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./style.css";
+import Navbar from "./components/Navbar";
 
 function App() {
-  return (
-    <div className="App">
-      <h1>My Resume Site Test</h1>
-      <h2>Author: Bartosz Brodowski</h2>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Navbar />
+        </div>
+    );
 }
 
 export default App;
