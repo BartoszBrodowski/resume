@@ -1,13 +1,27 @@
 $nav-bar-height: 7vh;
+$main-color: #40AC79;
+$leading-dark-color: #424242;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    // display: flex;
+    justify-content: center;
+}
+
 
 .navbar {
     display: flex;
     align-items: center;
-    background-color: #424242;
+    background-color: $leading-dark-color;
     width: 100vw;
-    // height: $nav-bar-height;
     height: 7vh;
-    position: fixed;
+    position: sticky;
+    top: 0;
     .navbar-list {
         display: flex;
         justify-content: space-around;
@@ -25,7 +39,7 @@ $nav-bar-height: 7vh;
             transition: 0.2s;
 
             &:hover {
-                color: #40AC79;
+                color: $main-color;
                 cursor: pointer;
             }
 
@@ -38,9 +52,56 @@ $nav-bar-height: 7vh;
 }
 .bio {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    gap: 3rem;
     width: 100vw;
-    margin-top: $nav-bar-height;
-    position: absolute;
+    margin-top: 7rem;
+    .image-container {
+        background-color: $main-color;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.55)
+    }
+    .greeting {
+        font-size: 1.3em;
+        .greeting-colored-text {
+            color: $main-color;
+            font-weight: 600;
+        }
+    }
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .buttons-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style-type: none;
+        width: 30%;
+        .buttons-list-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            color: $leading-dark-color;
+            background-color: white;
+            border-radius: 10px;
+            margin-top: 3rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+            &:hover {
+                cursor: pointer;
+            }
+            .buttons-list-item-icon {
+                width: 80%;
+                height: 80%;
+            }
+        }
+    }
 }
