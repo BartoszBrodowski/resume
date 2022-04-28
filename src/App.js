@@ -1,5 +1,5 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import "./style.css";
 import Bio from "./components/Bio";
 import Buttons from "./components/Buttons";
 import Navbar from "./components/Navbar";
@@ -7,9 +7,9 @@ import Navbar from "./components/Navbar";
 function App() {
     return (
         <div className="App">
+            <Navbar />
             <Bio />
             <Buttons />
-            <Navbar />
         </div>
     );
 }
