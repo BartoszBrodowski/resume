@@ -1,6 +1,46 @@
+$nav-bar-height: 7vh;
+
 .navbar {
+    display: flex;
+    align-items: center;
     background-color: #424242;
+    width: 100vw;
+    // height: $nav-bar-height;
+    height: 7vh;
+    position: fixed;
     .navbar-list {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
         margin: 0;
+
+        .navbar-list-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 0.5em;
+            align-items: center;
+            font-size: 1.5em;
+            color: white;
+            transition: 0.2s;
+
+            &:hover {
+                color: #40AC79;
+                cursor: pointer;
+            }
+
+            .navbar-list-item-icon {
+                height: 100%;
+                text-align: center;
+            }
+        }
     }
+}
+.bio {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    margin-top: $nav-bar-height;
+    position: absolute;
 }

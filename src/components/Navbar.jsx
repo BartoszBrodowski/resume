@@ -1,13 +1,17 @@
 import React from 'react'
+import { AiFillHome } from 'react-icons/ai'
+import { FaBrain, FaCode, FaEnvelope } from 'react-icons/fa'
+
+
 
 const Navbar = () => {
   return (
     <nav className='navbar'>
         <ul className='navbar-list'>
-            <li><img className="icon" alt="Home button" src='img/Home.svg'></img>Home</li>
-            <li><img className="icon" alt="Skills button" src='img/Skills.svg'></img>Skills</li>
-            <li><img className="icon" alt="Projects button" src='img/Projects.svg'></img>Projects</li>
-            <li><img className="icon" alt="Contact button" src='img/Contact.svg'></img>Contact</li>
+            <li className='navbar-list-item'><AiFillHome className='navbar-list-item-icon'/><div>Home</div></li>
+            <li className='navbar-list-item'><FaBrain className='navbar-list-item-icon'/><div>Skills</div></li>
+            <li className='navbar-list-item'><FaCode className='navbar-list-item-icon'/><div>Projects</div></li>
+            <li className='navbar-list-item'><FaEnvelope className='navbar-list-item-icon'/><div>Contact</div></li>
         </ul>
     </nav>
   )
