@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap');
+
 $nav-bar-height: 7vh;
 $main-color: #40AC79;
 $leading-dark-color: #424242;
+$off-white: #F5F5F5;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Baloo 2';
 }
 
 .navbar {
@@ -16,6 +20,7 @@ $leading-dark-color: #424242;
     height: 7vh;
     position: sticky;
     top: 0;
+    font-family: 'Baloo 2',cursive;
     .navbar-list {
         display: flex;
         justify-content: space-around;
@@ -29,7 +34,7 @@ $leading-dark-color: #424242;
             gap: 0.5em;
             align-items: center;
             font-size: 1.5em;
-            color: white;
+            color: $off-white;
             transition: 0.2s;
 
             &:hover {
@@ -51,19 +56,44 @@ $leading-dark-color: #424242;
     text-align: center;
     gap: 3rem;
     width: 100vw;
+    font-weight: 600;
     margin-top: 7rem;
+    color: $leading-dark-color;
     .image-container {
-        background-color: $main-color;
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.55)
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            z-index: 1;
+            position: absolute;
+        }
+        .first-decorative-circle,
+        .second-decorative-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: #40AC79;
+        }
+        .first-decorative-circle {
+            top: 10px;
+            background-color: rgba(102, 218, 164, 0.4);
+        }
+        .second-decorative-circle {
+            top: 20px;
+            background-color: rgba(107, 233, 174, 0.4);
+        }
     }
     .greeting {
-        font-size: 1.3em;
+        font-size: 1.6em;
+        letter-spacing: 0.1rem;
         .greeting-colored-text {
             color: $main-color;
-            font-weight: 600;
         }
     }
 }
@@ -77,24 +107,37 @@ $leading-dark-color: #424242;
         flex-direction: row;
         justify-content: space-around;
         list-style-type: none;
-        width: 30%;
-        .buttons-list-item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 50px;
-            height: 50px;
-            color: $leading-dark-color;
-            background-color: white;
-            border-radius: 10px;
-            margin-top: 3rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-            &:hover {
-                cursor: pointer;
+        width: 25%;
+        margin-top: 5rem;
+        a {
+            &:nth-child(1) > .buttons-list-item:hover {
+                background-color: #54C1CD;
             }
-            .buttons-list-item-icon {
-                width: 80%;
-                height: 80%;
+            &:nth-child(2)>.buttons-list-item:hover {
+                background-color: #F46A25;
+            }
+            &:nth-child(3)>.buttons-list-item:hover {
+                background-color: #0A66C2;
+            }
+            .buttons-list-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 4rem;
+                height: 4rem;
+                color: $off-white;
+                background-color: #2A2A2A;
+                border-radius: 1.2rem;
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.2, 1.2);
+                }
+                .buttons-list-item-icon {
+                    width: 50%;
+                    height: 50%;
+                }
             }
         }
     }
