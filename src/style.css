@@ -29,7 +29,7 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: #424242;
-  width: 100vw;
+  width: 100%;
   height: 7vh;
   position: -webkit-sticky;
   position: sticky;
@@ -92,7 +92,7 @@
           align-items: center;
   text-align: center;
   gap: 3rem;
-  width: 100vw;
+  width: 100%;
   font-weight: 600;
   color: #424242;
 }
@@ -226,15 +226,17 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 5rem;
-  margin-top: 3rem;
-  padding: 3rem;
-  width: 100vw;
+  gap: 3rem;
+  margin-top: 7rem;
+  padding: 3rem 0;
+  width: 90%;
+  border-radius: 80px;
   color: #F5F5F5;
   background-color: #424242;
 }
 
-#skills-section .skills-section {
+#skills-section .skills-section-good,
+#skills-section .skills-section-basic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -247,25 +249,53 @@
           justify-content: center;
 }
 
-#skills-section .skills-section-good h2 {
+#skills-section .skills-section-good h2,
+#skills-section .skills-section-basic h2 {
   text-align: center;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 #skills-section .skills-section-good .skills-section-good-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 15rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8rem;
   padding: 3rem;
   color: #40AC79;
 }
 
 #skills-section .skills-section-good .skills-section-good-icons .good-knowledge-icon {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
+}
+
+#skills-section .skills-dividing-line {
+  height: 5px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: grey;
+}
+
+#skills-section .skills-section-basic .skills-section-basic-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 6rem;
+  padding: 3rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#skills-section .skills-section-basic .skills-section-basic-icons .basic-knowledge-icon {
+  width: 100px;
+  height: 100px;
 }
 /*# sourceMappingURL=style.css.map */
