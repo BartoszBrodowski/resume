@@ -1,18 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap');
+
 $nav-bar-height: 7vh;
 $main-color: #40AC79;
 $leading-dark-color: #424242;
+$off-white: #F5F5F5;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Baloo 2';
 }
-
 .App {
-    // display: flex;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
 }
-
 
 .navbar {
     display: flex;
@@ -22,6 +26,8 @@ $leading-dark-color: #424242;
     height: 7vh;
     position: sticky;
     top: 0;
+    font-family: 'Baloo 2',cursive;
+    z-index: 10;
     .navbar-list {
         display: flex;
         justify-content: space-around;
@@ -35,7 +41,7 @@ $leading-dark-color: #424242;
             gap: 0.5em;
             align-items: center;
             font-size: 1.5em;
-            color: white;
+            color: $off-white;
             transition: 0.2s;
 
             &:hover {
@@ -57,19 +63,44 @@ $leading-dark-color: #424242;
     text-align: center;
     gap: 3rem;
     width: 100vw;
-    margin-top: 7rem;
+    font-weight: 600;
+    // margin-top: 7rem;
+    color: $leading-dark-color;
     .image-container {
-        background-color: $main-color;
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.55)
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            z-index: 1;
+            position: absolute;
+        }
+        .first-decorative-circle,
+        .second-decorative-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: #40AC79;
+        }
+        .first-decorative-circle {
+            top: 10px;
+            background-color: rgba(102, 218, 164, 0.4);
+        }
+        .second-decorative-circle {
+            top: 20px;
+            background-color: rgba(107, 233, 174, 0.4);
+        }
     }
     .greeting {
-        font-size: 1.3em;
+        font-size: 1.6em;
+        letter-spacing: 0.1rem;
         .greeting-colored-text {
             color: $main-color;
-            font-weight: 600;
         }
     }
 }
@@ -83,25 +114,77 @@ $leading-dark-color: #424242;
         flex-direction: row;
         justify-content: space-around;
         list-style-type: none;
-        width: 30%;
-        .buttons-list-item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 50px;
-            height: 50px;
-            color: $leading-dark-color;
-            background-color: white;
-            border-radius: 10px;
-            margin-top: 3rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-            &:hover {
-                cursor: pointer;
+        width: 25%;
+        a {
+            &:nth-child(1) > .buttons-list-item:hover {
+                background-color: #54C1CD;
             }
-            .buttons-list-item-icon {
-                width: 80%;
-                height: 80%;
+            &:nth-child(2)>.buttons-list-item:hover {
+                background-color: #F46A25;
+            }
+            &:nth-child(3)>.buttons-list-item:hover {
+                background-color: #0A66C2;
+            }
+            .buttons-list-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 4rem;
+                height: 4rem;
+                color: $off-white;
+                background-color: #2A2A2A;
+                border-radius: 1.2rem;
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.2, 1.2);
+                }
+                .buttons-list-item-icon {
+                    width: 50%;
+                    height: 50%;
+                }
             }
         }
     }
+}
+
+#skills-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 3rem;
+    padding: 3rem;
+    width: 100vw;
+    color: $off-white;
+    background-color: $leading-dark-color;
+    .skills-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+    }
+    .skills-section-good {
+        h2 {
+            text-align: center;
+            font-size: 3em;
+        }
+        .skills-section-good-icons {
+            display: flex;
+            align-items: center;
+            gap: 15rem;
+            padding: 3rem;
+            color: $main-color;
+            .good-knowledge-icon {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1366px) and (min-height: 768px) {
+
 }

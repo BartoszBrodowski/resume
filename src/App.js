@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
-import Navbar from "./components/Navbar";
-import Bio from "./components/Bio";
-import Buttons from "./components/Buttons"
-
+import Bio from "./components/MainSection/Bio";
+import Buttons from "./components/MainSection/Buttons";
+import Navbar from "./components/MainSection/Navbar";
+import Skills from "./components/Skills/Skills";
 
 function App() {
     return (
@@ -11,6 +11,7 @@ function App() {
             <Navbar />
             <Bio />
             <Buttons />
+            <Skills />
         </div>
     );
 }
